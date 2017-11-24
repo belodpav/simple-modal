@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Simple modal plugin</title>
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		*,
+		*:after,
+		*:before {
+			box-sizing: border-box;
+		}
+		body,
+		html {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+			font: 400 16px/26px Arial, sans-serif;
+		}
+		.container {
+			margin-left: auto;
+			margin-right: auto;
+			padding-left: 30px;
+			padding-right: 20px;
+		}
+		@media (min-width: 992px) {
+			.container {
+				width: 962px;
+			}
+		}
+		@media (min-width: 1200px) {
+			.container {
+				width: 1170px;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Lorem ipsum dolor sit amet.</h1>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi pariatur, totam itaque! Illo ratione soluta doloribus accusamus pariatur quam, culpa dolores impedit voluptas! Non dignissimos culpa alias ratione eaque. Aperiam.</p>
+		<button id="btn">Click</button>
+	</div>
+	
+	<script src="js/script.js"></script>
+	<script>
+		var successMessage = new SimpleModal({content: 'Success!'});
+		var btn = document.getElementById('btn');
+		btn.onclick = function () { successMessage.open(); };
+	</script>
+</body>
+</html>
